@@ -3,15 +3,11 @@ package com.mean.springcloud.controller;
 import com.mean.springcloud.entities.CommonResult;
 import com.mean.springcloud.entities.Payment;
 import com.mean.springcloud.service.PaymentService;
-import com.netflix.discovery.DiscoveryClient;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /***
  *  @Author :  ZhengJia
@@ -24,13 +20,11 @@ import java.util.List;
 public class PaymentController
 {
     @Resource
-    PaymentService paymentService;
+    private PaymentService paymentService;
 
     @Value("${server.port}")
     private String  serverPort;
 
-//    @Autowired
-//    private DiscoveryClient discoveryClient;
 
     @PostMapping(value = "/payment/create")
     public CommonResult create(@RequestBody Payment payment)
@@ -59,10 +53,4 @@ public class PaymentController
             return new CommonResult(444,"查询失败,Id:"+id,null);
         }
     }
-
-//    @GetMapping(value = "/payment/discovery")
-//    public Object discovery()
-//    {
-//        List<String> services = discoveryClient.getServices();
-//    }
 }
