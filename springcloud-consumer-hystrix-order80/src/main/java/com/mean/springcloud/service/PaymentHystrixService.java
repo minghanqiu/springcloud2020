@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  *  Description:
  **/
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER-HYSTRIX-PAYMENT")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentHystrixFallback.class)
 public interface PaymentHystrixService {
 
     @GetMapping(value = "/payment/hystrix/OK")
