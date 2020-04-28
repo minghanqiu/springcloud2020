@@ -17,13 +17,20 @@ spring:
       label: master
 
   #rabbit相关配置
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka #注册进eureka
+
+#暴露监控端点 用于动态刷新
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"

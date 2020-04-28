@@ -25,6 +25,18 @@
         <module>springcloud-gateway-gateway9527</module>
         <module>springcloud-config-center-3344</module>
         <module>springcloud-config-client-3355</module>
+        <module>springcloud-config-client-3366</module>
+        <module>springcloud-stream-rabbitmq-consumer8802</module>
+        <module>springcloud-stream-rabbitmq-consumer8803</module>
+        <module>springcloud-stream-rabbitmq-provider8801</module>
+        <module>springcloudalibaba-provider-payment9001</module>
+        <module>springcloudalibaba-provider-payment9002</module>
+        <module>springcloudalibaba-consumer-order83</module>
+        <module>springcloudalibaba-config-nacos-client3377</module>
+        <module>springcloudalibaba-sentinel-service8401</module>
+        <module>springcloudalibaba-provider-payment9003</module>
+        <module>springcloudalibaba-provider-payment9004</module>
+        <module>springcloudalibaba-consumer-order84</module>
     </modules>
 
     <!--统一管理jar包版本-->
